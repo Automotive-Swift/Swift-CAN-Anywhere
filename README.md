@@ -22,7 +22,7 @@ Create the interface by using the static factory method:
 ```swift
 import Swift_CAN_Anywhere
 
-let can = CAN.createAnywhere("can0")
+let can = CAN.attachToInterface("can0")
 ```
 
 ## Contributions
