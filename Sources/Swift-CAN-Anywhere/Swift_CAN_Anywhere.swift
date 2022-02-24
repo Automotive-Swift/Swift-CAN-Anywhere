@@ -1,4 +1,7 @@
-import Swift_CAN
+//
+// Swift-CAN-Anywhere. (C) Dr. Michael 'Mickey' Lauer <mickey@vanille-media.de>
+//
+@_exported import Swift_CAN
 #if os(Linux)
 import Swift_SocketCAN
 #endif
@@ -6,9 +9,9 @@ import Swift_SocketCAN
 import TouCAN
 #endif
 
-extension CAN.Interface {
+extension CAN {
 
-    static func createAnywhere(iface: String) -> CAN.Interface {
+    public static func attachToInterface(_ interface: String) -> CAN.Interface {
 
 #if os(macOS)
         return TouCAN()
