@@ -8,7 +8,7 @@ import TouCAN
 
 extension CAN.Interface {
 
-    static func createAnywhere(iface: String) -> Self {
+    static func createAnywhere(iface: String) -> CAN.Interface {
 
 #if os(macOS)
         return TouCAN()
